@@ -1,0 +1,121 @@
+header {
+    text-align: center; /* Centra il contenuto dell'header */
+    padding: 5px 0;    /* Aggiunge spazio sopra e sotto il logo */
+}
+
+.site-logo {
+    max-width: 400px; /* Imposta una larghezza massima per il logo */
+    width: 80%;       /* Rende il logo responsive, occupando l'80% dello spazio disponibile */
+    height: auto;     /* Mantiene le proporzioni originali dell'immagine */
+}
+
+body {
+    background-color: #38281c; /* Sfondo scuro per far risaltare le mensole */
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.trophy-case {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne di mensole */
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.shelf-container {
+    background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), #6b4a2f; /* Effetto legno */
+    background-color: #6b4a2f;
+    border: 5px solid #4a321f;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4), inset 0 5px 15px rgba(0,0,0,0.5);
+    padding-bottom: 70px; /* Spazio per il nome della squadra */
+    position: relative;
+    min-height: 280px; /* Altezza minima per la mensola */
+}
+
+.shelf {
+    padding: 15px;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100px; /* Assicura spazio anche se vuoto */
+}
+
+.bottom-row {
+    border-top: 8px solid #4a321f;
+    box-shadow: 0 -3px 5px rgba(0,0,0,0.3);
+}
+
+.trophy-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.trophy-item .year {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 5px;
+        text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.trophy-item img {
+    height: 60px; /* Altezza standard per i trofei */
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
+}
+
+.team-name {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.7em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         4px 4px 5px rgba(0,0,0,0.7);
+}
+
+/* Colori specifici per ogni squadra */
+.xgeneration { color: #ffff00; }
+.le-dune { color: #3399ff; }
+.steaua-barbu { color: #F75E25; }
+.klub-xy { color: #FFFFFF; }
+.canederli { color: #FFA500; }
+.gotasta { color: #008000; }
+.gioventus { color: #6DD100; }
+.jugherez { color: #ff0000; }
+
+
+/* Regola per la larghezza delle mensole */
+/* La larghezza è gestita dal flexbox e dal grid.
+   Per far sì che la larghezza dipenda dalla squadra con più trofei,
+   si potrebbe usare JavaScript, ma con il CSS moderno possiamo ottenere un buon risultato.
+   Questa configurazione con grid e flexbox farà sì che le colonne si adattino,
+   e la larghezza interna si adatterà al contenuto.
+   La Steaua Barbu, avendo più trofei, occuperà più spazio orizzontale
+   e le altre mensole si adatteranno di conseguenza. */
+
+@media (max-width: 768px) {
+    .trophy-case {
+        grid-template-columns: 1fr; /* Una colonna su schermi piccoli */
+    }
+    .team-name {
+        font-size: 2em;
+    }
+}
