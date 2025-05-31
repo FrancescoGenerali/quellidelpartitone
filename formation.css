@@ -17,6 +17,25 @@ header h1 {
     color: #58a6ff;
 }
 
+/* Stili per l'immagine della classifica */
+.standings-image-container {
+    margin-bottom: 40px; /* Spazio tra l'immagine e la prima sezione squadra */
+    text-align: center; /* Aiuta a centrare l'immagine se non occupa tutta la larghezza */
+}
+
+.season-standings-image {
+    display: block; /* Per permettere l'uso di margin: auto per la centratura orizzontale */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;   /* Rende l'immagine responsive, non supererà la larghezza del contenitore */
+    /* Se vuoi che l'immagine non superi una certa dimensione anche su schermi molto grandi: */
+    /* max-width: 750px; /* Ad esempio, la larghezza dello screenshot */
+    height: auto;      /* Mantiene le proporzioni dell'immagine */
+    border-radius: 8px;/* Angoli arrotondati per un look più morbido */
+    border: 2px solid #30363d; /* Un bordo sottile simile ad altri elementi */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25); /* Un po' di ombra per dare profondità */
+}
+
 .back-link {
     color: #58a6ff;
     text-decoration: none;
@@ -43,7 +62,12 @@ header h1 {
 /* Colori come nella bacheca */
 .xgeneration { color: #ffff00; }
 .le-dune { color: #3399ff; }
-/* ... ecc ... */
+.steaua-barbu { color: #F75E25; }
+.klub-xy { color: #FFFFFF; }
+.canederli { color: #FFA500; }
+.gotasta { color: #008000; }
+.gioventus { color: #6DD100; }
+.jugherez { color: #ff0000; }
 
 
 .squad-container {
@@ -112,19 +136,19 @@ header h1 {
 /* POSIZIONI GENERICHE (percentuali da sinistra e dall'alto) */
 .player.gk     { top: 92%; }
 .player.def-l  { top: 75%; }
-.player.def-lc { top: 75%; }
-.player.def-c  { top: 75%; }
-.player.def-rc { top: 75%; }
+.player.def-lc { top: 80%; }
+.player.def-c  { top: 80%; }
+.player.def-rc { top: 80%; }
 .player.def-r  { top: 75%; }
-.player.mid-l  { top: 55%; }
+.player.mid-l  { top: 45%; }
 .player.mid-lc { top: 55%; }
 .player.mid-c  { top: 50%; }
 .player.mid-rc { top: 55%; }
-.player.mid-r  { top: 55%; }
-.player.amc    { top: 35%; }
-.player.fwd-l  { top: 15%; }
+.player.mid-r  { top: 45%; }
+.player.amc    { top: 25%; }
+.player.fwd-l  { top: 17%; }
 .player.fwd-c  { top: 15%; }
-.player.fwd-r  { top: 15%; }
+.player.fwd-r  { top: 17%; }
 
 /* --- MODULI SPECIFICI --- */
 
@@ -134,8 +158,8 @@ header h1 {
 .module-3-4-1-2 .def-c, .module-3-5-2 .def-c   { left: 50%; }
 .module-3-4-1-2 .def-r, .module-3-5-2 .def-r   { left: 80%; }
 .module-3-4-1-2 .mid-l, .module-3-5-2 .mid-l   { left: 15%; }
-.module-3-4-1-2 .mid-lc, .module-3-5-2 .mid-cl { left: 40%; }
-.module-3-4-1-2 .mid-rc, .module-3-5-2 .mid-cr { left: 60%; }
+.module-3-4-1-2 .mid-lc, .module-3-5-2 .mid-lc { left: 40%; }
+.module-3-4-1-2 .mid-rc, .module-3-5-2 .mid-rc { left: 60%; }
 .module-3-4-1-2 .mid-r, .module-3-5-2 .mid-r   { left: 85%; }
 .module-3-4-1-2 .amc                          { top: 40%; left: 50%; } /* Diverso da 35% */
 .module-3-5-2 .mid-c                          { left: 50%; }
@@ -174,9 +198,9 @@ header h1 {
 .module-4-3-1-2 .def-lc { left: 37%; }
 .module-4-3-1-2 .def-rc { left: 63%; }
 .module-4-3-1-2 .def-r  { left: 85%; }
-.module-4-3-1-2 .mid-l  { top: 60%; left: 30%; }
+.module-4-3-1-2 .mid-l  { top: 50%; left: 30%; }
 .module-4-3-1-2 .mid-c  { top: 60%; left: 50%; }
-.module-4-3-1-2 .mid-r  { top: 60%; left: 70%; }
+.module-4-3-1-2 .mid-r  { top: 50%; left: 70%; }
 .module-4-3-1-2 .amc    { left: 50%; }
 .module-4-3-1-2 .fwd-l  { left: 35%; }
 .module-4-3-1-2 .fwd-r  { left: 65%; }
