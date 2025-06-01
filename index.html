@@ -68,7 +68,7 @@
                 <div class="bottom-row">
                     <div class="trophy-item">
                         <div class="year">2017/2018</div>
-                        <img src="images/coppa.png" alt="Coppa">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2017-2018.jpg">
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                     </div>
                     <div class="trophy-item">
                         <div class="year">2019/2020</div>
-                        <img src="images/coppa.png" alt="Coppa">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2019-2020.jpg">
                     </div>
                     <div class="trophy-item">
                         <div class="year">2020/2021</div>
@@ -112,15 +112,15 @@
                     </div>
                     <div class="trophy-item">
                         <div class="year">2022/2023</div>
-                        <img src="images/coppa.png" alt="Coppa">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2022-2023.png">
                     </div>
                      <div class="trophy-item">
                         <div class="year">2023/2024</div>
-                            <img src="images/coppa.png" alt="Coppa">
+                            <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2023-2024.png">
                     </div>
                     <div class="trophy-item">
                         <div class="year">2024/2025</div>
-                        <img src="images/coppa.png" alt="Coppa">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2024-2025.png">
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="trophy-item">
                         <div class="year">2020/2021</div>
-                        <img src="images/coppa.png" alt="Coppa">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2020-2021.jpg">
                     </div>
                 </div>
             </div>
@@ -192,15 +192,15 @@
                     </div>
                         <div class="trophy-item">
                         <div class="year">2016/2017</div>
-                        <img src="images/coppa.png" alt="Coppa">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2016-2017.jpg">
                     </div>
                         <div class="trophy-item">
                         <div class="year">2018/2019</div>
-                        <img src="images/coppa.png" alt="Coppa">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2018-2019.jpg">
                     </div>
                         <div class="trophy-item">
                         <div class="year">2021/2022</div>
-                        <img src="images/coppa.png" alt="Coppa">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2021-2022.jpg">
                     </div>
                         <div class="trophy-item">
                         <div class="year">2024/2025</div>
@@ -254,6 +254,56 @@
         </div>
 
         </div>
+
+    <!-- MODAL PER L'IMMAGINE DELLA COPPA -->
+    <div id="coppaModal" class="modal">
+        <span class="close-modal-button">×</span>
+        <img class="modal-content-image" id="modalCoppaImage" src="" alt="Dettaglio partita"> <!-- src="" o rimosso -->
+    </div>
+    <!-- FINE MODAL -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('coppaModal');
+            const modalImage = document.getElementById('modalCoppaImage');
+            const closeModalButton = document.querySelector('.modal .close-modal-button');
+
+            // Seleziona TUTTE le immagini con alt="Coppa"
+            const coppaImages = document.querySelectorAll('.trophy-item img[alt="Coppa"]');
+
+            coppaImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    // Controlla se l'immagine cliccata ha l'attributo data-modal-image
+                    const modalImageSrc = this.dataset.modalImage; // this.getAttribute('data-modal-image');
+
+                    if (modalImageSrc && modalImageSrc.trim() !== '') {
+                        modalImage.src = modalImageSrc; // Imposta l'immagine del modal
+                        modal.style.display = 'block';  // Mostra il modal
+                    }
+                    // Se l'attributo non esiste o è vuoto, non fa nulla
+                });
+            });
+
+            // Funzione per chiudere il modal
+            function closeModal() {
+                modal.style.display = 'none';
+                modalImage.src = ""; // Opzionale: resetta src per liberare memoria o evitare flash
+            }
+
+            // Quando l'utente clicca sull'immagine grande nel modal, chiudi il modal
+            modalImage.addEventListener('click', closeModal);
+
+            // Quando l'utente clicca sul pulsante di chiusura (x), chiudi il modal
+            closeModalButton.addEventListener('click', closeModal);
+
+            // Opzionale: chiudi il modal se l'utente clicca fuori dall'immagine (sullo sfondo)
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
