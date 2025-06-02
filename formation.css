@@ -15,6 +15,31 @@ header {
 header h1 {
     font-size: 3em;
     color: #58a6ff;
+    line-height: 1.2;
+}
+
+header h1 .mobile-br {
+    display: none; /* Nascosto di default (desktop) */
+}
+
+@media (max-width: 768px) { /* Puoi aggiustare questo breakpoint se necessario */
+    header h1 {
+        /* Potresti voler ridurre leggermente il font-size su mobile se necessario */
+        /* font-size: 2.5em; */
+    }
+    header h1 .mobile-br {
+        display: inline; /* Mostra il <br> solo su mobile */
+    }
+
+    /* Per evitare che "2015-2016" vada a capo ulteriormente, anche se non dovrebbe essere necessario */
+    /* con il <br> precedente, ma per sicurezza: */
+    header h1 span:not(.mobile-br) { /* Seleziona lo span che NON è .mobile-br, se lo usi */
+        /* Se non usi uno span attorno all'anno, puoi provare a targettare diversamente
+           o sperare che il <br> sia sufficiente.
+           Questo è un po' più complesso se l'anno non è in uno span separato.
+           La soluzione 2 potrebbe essere migliore per questo.
+        */
+    }
 }
 
 /* Stili per l'immagine della classifica */
