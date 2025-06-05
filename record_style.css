@@ -1,0 +1,148 @@
+/* Stili generali del corpo pagina */
+body {
+    background-color: #38281c;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stili dell'header (titolo e link per tornare indietro) */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2a1e16;
+    border-bottom: 4px solid #4a321f;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #f1f1f1;
+    text-decoration: none;
+    background-color: #6b4a2f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #8c6a4f;
+}
+
+/* Contenitore principale del contenuto */
+main {
+    padding: 20px;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #ffd700;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+/* Stili della tabella */
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.records-table th,
+.records-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #4a321f;
+}
+
+.records-table thead th {
+    background-color: #4a321f;
+    color: #ffd700;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.records-table td {
+    background-color: #5a3f2a;
+}
+
+.records-table tr:hover td {
+    background-color: #6b4a2f;
+}
+
+/* Intestazioni di sezione colorate */
+.role-header th {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.role-portieri th {
+    background-color: #007bff;
+}
+
+/* Blu */
+.role-difensori th {
+    background-color: #28a745;
+}
+
+/* Verde */
+.role-centrocampisti th {
+    background-color: #fd7e14;
+}
+
+/* Arancione */
+.role-attaccanti th {
+    background-color: #dc3545;
+}
+
+/* Rosso */
+
+
+/* Galleria per altri record */
+.record-gallery {
+    text-align: center;
+}
+
+.record-gallery hr {
+    border: 0;
+    height: 2px;
+    background-color: #4a321f;
+    margin: 40px 0;
+}
+
+.record-item {
+    margin-bottom: 40px;
+}
+
+.record-item h3 {
+    font-size: 1.8em;
+    color: #e9ecef;
+    margin-bottom: 15px;
+}
+
+.record-item img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #6b4a2f;
+    border-radius: 8px;
+}
