@@ -193,3 +193,27 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Stile per il contenitore del link Bacheca Classica */
+.classic-trophy-case-link-container {
+    text-align: center; /* Centra il testo */
+    padding: 20px;      /* Spazio attorno */
+    margin-top: 40px;   /* Spazio sopra, per distanziarlo dal resto */
+    margin-bottom: 20px; /* Spazio sotto */
+}
+
+/* Stile per la scritta Bacheca Classica */
+#classicTrophyCaseLink {
+    color: #ffd700; /* Colore dorato, simile agli anni dei trofei */
+    font-size: 1.8em; /* Dimensione del font */
+    font-weight: bold;
+    cursor: pointer; /* Cursore a manina per indicare che è cliccabile */
+    text-decoration: none; /* Rimuove la sottolineatura di default */
+    padding-bottom: 3px; /* Spazio per la finta sottolineatura sull'hover */
+    border-bottom: 2px solid transparent; /* Bordo trasparente per l'effetto hover */
+    transition: border-color 0.3s ease-in-out; /* Transizione fluida per l'hover */
+}
+
+#classicTrophyCaseLink:hover {
+    border-bottom-color: #ffd700; /* Simula una sottolineatura dorata al passaggio del mouse */
+}

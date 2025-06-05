@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header>
-    <img src="images/QuelliDelPartitone_Logotipo.png" alt="Logo Quelli del Partitone" class="site-logo">
-  </header>
+    <header>
+        <img src="images/QuelliDelPartitone_Logotipo.png" alt="Logo Quelli del Partitone" class="site-logo">
+    </header>
 
     <div class="trophy-case">
 
@@ -80,7 +82,7 @@
         <div class="shelf-container">
             <div class="shelf">
                 <div class="top-row">
-                    </div>
+                </div>
                 <div class="bottom-row">
                     <div class="trophy-item">
                         <div class="year">2009/2010</div>
@@ -98,7 +100,7 @@
                         <div class="year">2014/2015</div>
                         <img src="images/scudetto.png" alt="Scudetto">
                     </div>
-                        <div class="trophy-item">
+                    <div class="trophy-item">
                         <div class="year">2014/2015</div>
                         <img src="images/coppa.png" alt="Coppa">
                     </div>
@@ -116,9 +118,9 @@
                         <div class="year">2022/2023</div>
                         <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2022-2023.png">
                     </div>
-                     <div class="trophy-item">
+                    <div class="trophy-item">
                         <div class="year">2023/2024</div>
-                            <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2023-2024.png">
+                        <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2023-2024.png">
                     </div>
                     <div class="trophy-item">
                         <div class="year">2024/2025</div>
@@ -132,7 +134,7 @@
         <div class="shelf-container">
             <div class="shelf">
                 <div class="top-row">
-                    </div>
+                </div>
                 <div class="bottom-row">
                     <div class="trophy-item">
                         <div class="year">2018/2019</div>
@@ -152,7 +154,7 @@
         <div class="shelf-container">
             <div class="shelf">
                 <div class="top-row">
-                    </div>
+                </div>
                 <div class="bottom-row">
                     <div class="trophy-item">
                         <div class="year">2011/2012</div>
@@ -166,7 +168,7 @@
                             <img src="images/scudetto.png" alt="Scudetto">
                         </a>
                     </div>
-                        <div class="trophy-item">
+                    <div class="trophy-item">
                         <div class="year">2017/2018</div>
                         <a href="stagione-2017-2018.html">
                             <img src="images/scudetto.png" alt="Scudetto">
@@ -198,25 +200,25 @@
                             <img src="images/scudetto.png" alt="Scudetto">
                         </a>
                     </div>
-                        <div class="trophy-item">
+                    <div class="trophy-item">
                         <div class="year">2015/2016</div>
                         <a href="stagione-2015-2016.html">
                             <img src="images/scudetto.png" alt="Scudetto">
                         </a>
                     </div>
-                        <div class="trophy-item">
+                    <div class="trophy-item">
                         <div class="year">2016/2017</div>
                         <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2016-2017.jpg">
                     </div>
-                        <div class="trophy-item">
+                    <div class="trophy-item">
                         <div class="year">2018/2019</div>
                         <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2018-2019.jpg">
                     </div>
-                        <div class="trophy-item">
+                    <div class="trophy-item">
                         <div class="year">2021/2022</div>
                         <img src="images/coppa.png" alt="Coppa" data-modal-image="images/FinaleCoppa_2021-2022.jpg">
                     </div>
-                        <div class="trophy-item">
+                    <div class="trophy-item">
                         <div class="year">2024/2025</div>
                         <a href="stagione-2024-2025.html">
                             <img src="images/scudetto.png" alt="Scudetto">
@@ -230,7 +232,7 @@
         <div class="shelf-container">
             <div class="shelf">
                 <div class="top-row">
-                    </div>
+                </div>
                 <div class="bottom-row">
                     <div class="trophy-item">
                         <div class="year">2012/2013</div>
@@ -269,7 +271,11 @@
             <div class="team-name jugherez">JUGHEREZ</div>
         </div>
 
-        </div>
+    </div>
+
+    <div class="classic-trophy-case-link-container">
+        <span id="classicTrophyCaseLink">Bacheca Classica</span>
+    </div>
 
     <!-- MODAL PER L'IMMAGINE DELLA COPPA -->
     <div id="coppaModal" class="modal">
@@ -279,47 +285,68 @@
     <!-- FINE MODAL -->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const modal = document.getElementById('coppaModal');
             const modalImage = document.getElementById('modalCoppaImage');
             const closeModalButton = document.querySelector('.modal .close-modal-button');
 
-            // Seleziona TUTTE le immagini con alt="Coppa"
             const coppaImages = document.querySelectorAll('.trophy-item img[alt="Coppa"]');
 
             coppaImages.forEach(img => {
-                img.addEventListener('click', function() {
-                    // Controlla se l'immagine cliccata ha l'attributo data-modal-image
-                    const modalImageSrc = this.dataset.modalImage; // this.getAttribute('data-modal-image');
-
+                img.addEventListener('click', function () {
+                    const modalImageSrc = this.dataset.modalImage;
                     if (modalImageSrc && modalImageSrc.trim() !== '') {
-                        modalImage.src = modalImageSrc; // Imposta l'immagine del modal
-                        modal.style.display = 'block';  // Mostra il modal
+                        if (modalImage && modal) {
+                            modalImage.src = modalImageSrc;
+                            modalImage.alt = "Dettaglio Coppa"; // Puoi personalizzare l'alt
+                            modal.style.display = 'block';
+                        }
                     }
-                    // Se l'attributo non esiste o è vuoto, non fa nulla
                 });
             });
 
-            // Funzione per chiudere il modal
+            // --- NUOVO CODICE PER BACHECA CLASSICA ---
+            const classicTrophyCaseLink = document.getElementById('classicTrophyCaseLink');
+            // Assicurati che l'immagine VecchiaBachecaSquadre.png sia nella cartella 'images'
+            // e che il nome del file sia corretto (VecchiaBachecaSquadre.png come da tue istruzioni)
+            const classicTrophyImageSrc = 'images/VecchiaBachecaSquadre.png';
+
+            if (classicTrophyCaseLink) {
+                classicTrophyCaseLink.addEventListener('click', function () {
+                    if (modalImage && modal) {
+                        modalImage.src = classicTrophyImageSrc;
+                        modalImage.alt = "VecchiaBachecaSquadre"; // Testo alternativo per l'immagine
+                        modal.style.display = 'block';
+                    }
+                });
+            }
+            // --- FINE NUOVO CODICE ---
+
             function closeModal() {
-                modal.style.display = 'none';
-                modalImage.src = ""; // Opzionale: resetta src per liberare memoria o evitare flash
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+                if (modalImage) {
+                    modalImage.src = "";
+                }
             }
 
-            // Quando l'utente clicca sull'immagine grande nel modal, chiudi il modal
-            modalImage.addEventListener('click', closeModal);
-
-            // Quando l'utente clicca sul pulsante di chiusura (x), chiudi il modal
-            closeModalButton.addEventListener('click', closeModal);
-
-            // Opzionale: chiudi il modal se l'utente clicca fuori dall'immagine (sullo sfondo)
-            modal.addEventListener('click', function(event) {
-                if (event.target === modal) {
-                    closeModal();
-                }
-            });
+            if (modalImage) {
+                modalImage.addEventListener('click', closeModal);
+            }
+            if (closeModalButton) {
+                closeModalButton.addEventListener('click', closeModal);
+            }
+            if (modal) {
+                modal.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
         });
     </script>
 
 </body>
+
 </html>
