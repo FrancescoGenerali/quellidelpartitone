@@ -105,6 +105,18 @@ body {
         4px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
+.team-name a {
+    text-decoration: none;
+    color: inherit; /* Il link eredita il colore dal suo contenitore (es. giallo per XGeneration) */
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+    display: inline-block; /* Necessario per applicare la trasformazione */
+}
+
+.team-name a:hover {
+    transform: scale(1.05); /* Ingredisce leggermente il nome */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Aggiunge una lieve aura luminosa */
+}
+
 /* Colori specifici per ogni squadra */
 .xgeneration {
     color: #ffff00;

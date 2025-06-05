@@ -19,21 +19,27 @@ header h1 {
 }
 
 header h1 .mobile-br {
-    display: none; /* Nascosto di default (desktop) */
+    display: none;
+    /* Nascosto di default (desktop) */
 }
 
-@media (max-width: 768px) { /* Puoi aggiustare questo breakpoint se necessario */
+@media (max-width: 768px) {
+
+    /* Puoi aggiustare questo breakpoint se necessario */
     header h1 {
         /* Potresti voler ridurre leggermente il font-size su mobile se necessario */
         /* font-size: 2.5em; */
     }
+
     header h1 .mobile-br {
-        display: inline; /* Mostra il <br> solo su mobile */
+        display: inline;
+        /* Mostra il <br> solo su mobile */
     }
 
     /* Per evitare che "2015-2016" vada a capo ulteriormente, anche se non dovrebbe essere necessario */
     /* con il <br> precedente, ma per sicurezza: */
-    header h1 span:not(.mobile-br) { /* Seleziona lo span che NON è .mobile-br, se lo usi */
+    header h1 span:not(.mobile-br) {
+        /* Seleziona lo span che NON è .mobile-br, se lo usi */
         /* Se non usi uno span attorno all'anno, puoi provare a targettare diversamente
            o sperare che il <br> sia sufficiente.
            Questo è un po' più complesso se l'anno non è in uno span separato.
@@ -44,21 +50,29 @@ header h1 .mobile-br {
 
 /* Stili per l'immagine della classifica */
 .standings-image-container {
-    margin-bottom: 40px; /* Spazio tra l'immagine e la prima sezione squadra */
-    text-align: center; /* Aiuta a centrare l'immagine se non occupa tutta la larghezza */
+    margin-bottom: 40px;
+    /* Spazio tra l'immagine e la prima sezione squadra */
+    text-align: center;
+    /* Aiuta a centrare l'immagine se non occupa tutta la larghezza */
 }
 
 .season-standings-image {
-    display: block; /* Per permettere l'uso di margin: auto per la centratura orizzontale */
+    display: block;
+    /* Per permettere l'uso di margin: auto per la centratura orizzontale */
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;   /* Rende l'immagine responsive, non supererà la larghezza del contenitore */
+    max-width: 100%;
+    /* Rende l'immagine responsive, non supererà la larghezza del contenitore */
     /* Se vuoi che l'immagine non superi una certa dimensione anche su schermi molto grandi: */
     /* max-width: 750px; /* Ad esempio, la larghezza dello screenshot */
-    height: auto;      /* Mantiene le proporzioni dell'immagine */
-    border-radius: 8px;/* Angoli arrotondati per un look più morbido */
-    border: 2px solid #30363d; /* Un bordo sottile simile ad altri elementi */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.25); /* Un po' di ombra per dare profondità */
+    height: auto;
+    /* Mantiene le proporzioni dell'immagine */
+    border-radius: 8px;
+    /* Angoli arrotondati per un look più morbido */
+    border: 2px solid #30363d;
+    /* Un bordo sottile simile ad altri elementi */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    /* Un po' di ombra per dare profondità */
 }
 
 .back-link {
@@ -71,28 +85,66 @@ header h1 .mobile-br {
     text-decoration: underline;
 }
 
+/* Stile per i titoli delle stagioni nelle pagine squadra */
+.season-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 60px;
+    /* Aumenta lo spazio tra una stagione e l'altra */
+    margin-bottom: 25px;
+    color: #c9d1d9;
+    /* Un colore neutro per il titolo della stagione */
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 10px;
+}
+
 /* Sezione per ogni squadra */
 .team-section {
     margin-bottom: 50px;
 }
 
 .team-name-formation {
-    font-family: 'Roboto', sans-serif; /* Usa lo stesso font se vuoi coerenza */
+    font-family: 'Roboto', sans-serif;
+    /* Usa lo stesso font se vuoi coerenza */
     font-size: 3em;
     font-weight: 900;
     text-align: center;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+
 /* Colori come nella bacheca */
-.xgeneration { color: #ffff00; }
-.le-dune { color: #3399ff; }
-.steaua-barbu { color: #F75E25; }
-.klub-xy { color: #FFFFFF; }
-.canederli { color: #FFA500; }
-.gotasta { color: #008000; }
-.gioventus { color: #6DD100; }
-.jugherez { color: #ff0000; }
+.xgeneration {
+    color: #ffff00;
+}
+
+.le-dune {
+    color: #3399ff;
+}
+
+.steaua-barbu {
+    color: #F75E25;
+}
+
+.klub-xy {
+    color: #FFFFFF;
+}
+
+.canederli {
+    color: #FFA500;
+}
+
+.gotasta {
+    color: #008000;
+}
+
+.gioventus {
+    color: #6DD100;
+}
+
+.jugherez {
+    color: #ff0000;
+}
 
 
 .squad-container {
@@ -134,7 +186,8 @@ header h1 .mobile-br {
     position: relative;
     width: 600px;
     height: 800px;
-    background: url('images/campo-sfondo.jpg') no-repeat center center; /* Sfondo campo da calcio */
+    background: url('images/campo-sfondo.jpg') no-repeat center center;
+    /* Sfondo campo da calcio */
     background-size: cover;
     border: 3px solid white;
     border-radius: 10px;
@@ -143,7 +196,8 @@ header h1 .mobile-br {
 /* Giocatore */
 .player {
     position: absolute;
-    transform: translateX(-50%); /* Centra il giocatore orizzontalmente */
+    transform: translateX(-50%);
+    /* Centra il giocatore orizzontalmente */
 }
 
 .player span {
@@ -155,77 +209,270 @@ header h1 .mobile-br {
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #c9d1d9;
-    white-space: nowrap; /* Evita che il nome vada a capo */
+    white-space: nowrap;
+    /* Evita che il nome vada a capo */
 }
 
 /* POSIZIONI GENERICHE (percentuali da sinistra e dall'alto) */
-.player.gk     { top: 92%; }
-.player.def-l  { top: 75%; }
-.player.def-lc { top: 80%; }
-.player.def-c  { top: 80%; }
-.player.def-rc { top: 80%; }
-.player.def-r  { top: 75%; }
-.player.mid-l  { top: 45%; }
-.player.mid-lc { top: 55%; }
-.player.mid-c  { top: 50%; }
-.player.mid-rc { top: 55%; }
-.player.mid-r  { top: 45%; }
-.player.amc    { top: 25%; }
-.player.fwd-l  { top: 17%; }
-.player.fwd-c  { top: 15%; }
-.player.fwd-r  { top: 17%; }
+.player.gk {
+    top: 92%;
+}
+
+.player.def-l {
+    top: 75%;
+}
+
+.player.def-lc {
+    top: 80%;
+}
+
+.player.def-c {
+    top: 80%;
+}
+
+.player.def-rc {
+    top: 80%;
+}
+
+.player.def-r {
+    top: 75%;
+}
+
+.player.mid-l {
+    top: 45%;
+}
+
+.player.mid-lc {
+    top: 55%;
+}
+
+.player.mid-c {
+    top: 50%;
+}
+
+.player.mid-rc {
+    top: 55%;
+}
+
+.player.mid-r {
+    top: 45%;
+}
+
+.player.amc {
+    top: 25%;
+}
+
+.player.fwd-l {
+    top: 17%;
+}
+
+.player.fwd-c {
+    top: 15%;
+}
+
+.player.fwd-r {
+    top: 17%;
+}
 
 /* --- MODULI SPECIFICI --- */
 
 /* MODULO 3-5-2 (o 3-4-1-2 come nell'immagine) */
-.module-3-4-1-2 .gk, .module-3-5-2 .gk         { left: 50%; }
-.module-3-4-1-2 .def-l, .module-3-5-2 .def-l   { left: 20%; }
-.module-3-4-1-2 .def-c, .module-3-5-2 .def-c   { left: 50%; }
-.module-3-4-1-2 .def-r, .module-3-5-2 .def-r   { left: 80%; }
-.module-3-4-1-2 .mid-l, .module-3-5-2 .mid-l   { left: 15%; }
-.module-3-4-1-2 .mid-lc, .module-3-5-2 .mid-lc { left: 40%; }
-.module-3-4-1-2 .mid-rc, .module-3-5-2 .mid-rc { left: 60%; }
-.module-3-4-1-2 .mid-r, .module-3-5-2 .mid-r   { left: 85%; }
-.module-3-4-1-2 .amc                          { top: 40%; left: 50%; } /* Diverso da 35% */
-.module-3-5-2 .mid-c                          { left: 50%; }
-.module-3-4-1-2 .fwd-l, .module-3-5-2 .fwd-l   { left: 35%; }
-.module-3-4-1-2 .fwd-r, .module-3-5-2 .fwd-r   { left: 65%; }
+.module-3-4-1-2 .gk,
+.module-3-5-2 .gk {
+    left: 50%;
+}
+
+.module-3-4-1-2 .def-l,
+.module-3-5-2 .def-l {
+    left: 20%;
+}
+
+.module-3-4-1-2 .def-c,
+.module-3-5-2 .def-c {
+    left: 50%;
+}
+
+.module-3-4-1-2 .def-r,
+.module-3-5-2 .def-r {
+    left: 80%;
+}
+
+.module-3-4-1-2 .mid-l,
+.module-3-5-2 .mid-l {
+    left: 15%;
+}
+
+.module-3-4-1-2 .mid-lc,
+.module-3-5-2 .mid-lc {
+    left: 40%;
+}
+
+.module-3-4-1-2 .mid-rc,
+.module-3-5-2 .mid-rc {
+    left: 60%;
+}
+
+.module-3-4-1-2 .mid-r,
+.module-3-5-2 .mid-r {
+    left: 85%;
+}
+
+.module-3-4-1-2 .amc {
+    top: 40%;
+    left: 50%;
+}
+
+/* Diverso da 35% */
+.module-3-5-2 .mid-c {
+    left: 50%;
+}
+
+.module-3-4-1-2 .fwd-l,
+.module-3-5-2 .fwd-l {
+    left: 35%;
+}
+
+.module-3-4-1-2 .fwd-r,
+.module-3-5-2 .fwd-r {
+    left: 65%;
+}
 
 /* MODULO 4-3-3 */
-.module-4-3-3 .gk     { left: 50%; }
-.module-4-3-3 .def-l  { left: 15%; }
-.module-4-3-3 .def-lc { left: 37%; }
-.module-4-3-3 .def-rc { left: 63%; }
-.module-4-3-3 .def-r  { left: 85%; }
-.module-4-3-3 .mid-l  { left: 30%; }
-.module-4-3-3 .mid-c  { left: 50%; }
-.module-4-3-3 .mid-r  { left: 70%; }
-.module-4-3-3 .fwd-l  { left: 20%; }
-.module-4-3-3 .fwd-c  { left: 50%; }
-.module-4-3-3 .fwd-r  { left: 80%; }
+.module-4-3-3 .gk {
+    left: 50%;
+}
+
+.module-4-3-3 .def-l {
+    left: 15%;
+}
+
+.module-4-3-3 .def-lc {
+    left: 37%;
+}
+
+.module-4-3-3 .def-rc {
+    left: 63%;
+}
+
+.module-4-3-3 .def-r {
+    left: 85%;
+}
+
+.module-4-3-3 .mid-l {
+    left: 30%;
+}
+
+.module-4-3-3 .mid-c {
+    left: 50%;
+}
+
+.module-4-3-3 .mid-r {
+    left: 70%;
+}
+
+.module-4-3-3 .fwd-l {
+    left: 20%;
+}
+
+.module-4-3-3 .fwd-c {
+    left: 50%;
+}
+
+.module-4-3-3 .fwd-r {
+    left: 80%;
+}
 
 /* MODULO 4-4-2 */
-.module-4-4-2 .gk     { left: 50%; }
-.module-4-4-2 .def-l  { left: 15%; }
-.module-4-4-2 .def-lc { left: 37%; }
-.module-4-4-2 .def-rc { left: 63%; }
-.module-4-4-2 .def-r  { left: 85%; }
-.module-4-4-2 .mid-l  { left: 18%; }
-.module-4-4-2 .mid-lc { top: 50%; left: 40%; }
-.module-4-4-2 .mid-rc { top: 50%; left: 60%; }
-.module-4-4-2 .mid-r  { left: 82%; }
-.module-4-4-2 .fwd-l  { left: 35%; }
-.module-4-4-2 .fwd-r  { left: 65%; }
+.module-4-4-2 .gk {
+    left: 50%;
+}
+
+.module-4-4-2 .def-l {
+    left: 15%;
+}
+
+.module-4-4-2 .def-lc {
+    left: 37%;
+}
+
+.module-4-4-2 .def-rc {
+    left: 63%;
+}
+
+.module-4-4-2 .def-r {
+    left: 85%;
+}
+
+.module-4-4-2 .mid-l {
+    left: 18%;
+}
+
+.module-4-4-2 .mid-lc {
+    top: 50%;
+    left: 40%;
+}
+
+.module-4-4-2 .mid-rc {
+    top: 50%;
+    left: 60%;
+}
+
+.module-4-4-2 .mid-r {
+    left: 82%;
+}
+
+.module-4-4-2 .fwd-l {
+    left: 35%;
+}
+
+.module-4-4-2 .fwd-r {
+    left: 65%;
+}
 
 /* MODULO 4-3-1-2 */
-.module-4-3-1-2 .gk     { left: 50%; }
-.module-4-3-1-2 .def-l  { left: 15%; }
-.module-4-3-1-2 .def-lc { left: 37%; }
-.module-4-3-1-2 .def-rc { left: 63%; }
-.module-4-3-1-2 .def-r  { left: 85%; }
-.module-4-3-1-2 .mid-l  { top: 50%; left: 30%; }
-.module-4-3-1-2 .mid-c  { top: 60%; left: 50%; }
-.module-4-3-1-2 .mid-r  { top: 50%; left: 70%; }
-.module-4-3-1-2 .amc    { left: 50%; }
-.module-4-3-1-2 .fwd-l  { left: 35%; }
-.module-4-3-1-2 .fwd-r  { left: 65%; }
+.module-4-3-1-2 .gk {
+    left: 50%;
+}
+
+.module-4-3-1-2 .def-l {
+    left: 15%;
+}
+
+.module-4-3-1-2 .def-lc {
+    left: 37%;
+}
+
+.module-4-3-1-2 .def-rc {
+    left: 63%;
+}
+
+.module-4-3-1-2 .def-r {
+    left: 85%;
+}
+
+.module-4-3-1-2 .mid-l {
+    top: 50%;
+    left: 30%;
+}
+
+.module-4-3-1-2 .mid-c {
+    top: 60%;
+    left: 50%;
+}
+
+.module-4-3-1-2 .mid-r {
+    top: 50%;
+    left: 70%;
+}
+
+.module-4-3-1-2 .amc {
+    left: 50%;
+}
+
+.module-4-3-1-2 .fwd-l {
+    left: 35%;
+}
+
+.module-4-3-1-2 .fwd-r {
+    left: 65%;
+}
