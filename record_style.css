@@ -146,3 +146,91 @@ h2 {
     border: 3px solid #6b4a2f;
     border-radius: 8px;
 }
+
+@media (max-width: 768px) {
+    /* ... (stili dalla soluzione 1 come la riduzione dei font, se li usi) ... */
+
+    /* Nascondi l'header della tabella tradizionale su mobile */
+    .records-table thead {
+        display: none;
+    }
+
+    .records-table,
+    .records-table tbody,
+    .records-table tr,
+    .records-table td {
+        display: block;
+        /* Fa sì che ogni elemento occupi tutta la larghezza */
+        width: 100% !important;
+        /* Assicura che occupi tutta la larghezza disponibile */
+        box-sizing: border-box;
+        /* Include padding e border nel calcolo della larghezza */
+    }
+
+    .records-table tr {
+        margin-bottom: 15px;
+        /* Spazio tra le "card" */
+        border: 1px solid #4a321f;
+        /* Bordo per ogni "card" */
+        border-radius: 5px;
+        /* Angoli arrotondati */
+        overflow: hidden;
+        /* Per contenere i float se usati nei figli */
+    }
+
+    .records-table td {
+        text-align: right;
+        /* Allinea il valore a destra */
+        padding-left: 50%;
+        /* Lascia spazio a sinistra per l'etichetta */
+        position: relative;
+        border-bottom: 1px dotted #6b4a2f;
+        /* Separatore leggero tra i dati di una card */
+    }
+
+    .records-table td:last-child {
+        border-bottom: none;
+        /* Rimuovi il bordo dall'ultimo td della card */
+    }
+
+    .records-table td::before {
+        content: attr(data-label);
+        /* Prende il contenuto dall'attributo data-label */
+        position: absolute;
+        left: 10px;
+        /* Spazio dal bordo sinistro */
+        width: calc(50% - 20px);
+        /* Larghezza dell'etichetta */
+        padding-right: 10px;
+        white-space: nowrap;
+        /* L'etichetta non va a capo */
+        text-align: left;
+        font-weight: bold;
+        color: #ffd700;
+        /* Colore dell'etichetta */
+    }
+
+    /* Stile per le intestazioni di ruolo (Portieri, Difensori, etc.) */
+    .records-table .role-header th {
+        display: block;
+        width: 100% !important;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        /* Spazio sotto l'intestazione del ruolo */
+        border-radius: 5px;
+    }
+
+    .records-table .role-header {
+        /* Rimuovi il bordo extra dalla riga dell'header del ruolo */
+        border: none;
+        margin-bottom: 0;
+        /* Potrebbe non essere necessario se il th ha già un margin-bottom */
+    }
+
+    /* Nascondi il colspan per l'header di ruolo, dato che ora è un blocco */
+    .records-table .role-header th[colspan="4"] {
+        /* Non serve più colspan, è già full width */
+    }
+
+}
