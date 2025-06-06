@@ -34,6 +34,7 @@ header h1 {
     display: block;
     /* Per occupare tutta la larghezza e permettere margin auto se necessario */
     width: 100%;
+    max-width: 100%;
     /* Fa sì che l'immagine si estenda per tutta la larghezza del contenitore */
     max-height: 400px;
     /* Imposta un'altezza massima per evitare che diventi troppo grande */
