@@ -4,18 +4,61 @@ body {
     color: #c9d1d9;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 header {
     text-align: center;
     margin-bottom: 40px;
+    padding: 20px;
 }
 
 header h1 {
     font-size: 3em;
     color: #ffd700;
     line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Stili specifici per l'header delle pagine squadra (es. team_Jugherez.html) */
+.team-page-header {
+    padding: 0;
+    /* Rimuovi padding se l'immagine deve toccare i bordi */
+    margin-bottom: 30px;
+    /* Spazio sotto il banner */
+    text-align: center;
+    /* Per centrare il link "Torna alla Bacheca" sotto il banner */
+}
+
+.team-banner-image {
+    display: block;
+    /* Per occupare tutta la larghezza e permettere margin auto se necessario */
+    width: 100%;
+    /* Fa sì che l'immagine si estenda per tutta la larghezza del contenitore */
+    max-height: 400px;
+    /* Imposta un'altezza massima per evitare che diventi troppo grande */
+    /* Aggiusta questo valore in base alle tue preferenze e alle proporzioni dell'immagine */
+    object-fit: cover;
+    /* Scala l'immagine per mantenere le proporzioni riempiendo lo spazio.
+                           Potrebbe tagliare parti dell'immagine. Altre opzioni: 'contain', 'fill', 'scale-down' */
+    /* Se vuoi un bordo o un'ombra: */
+    /* border-bottom: 3px solid #30363d; */
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.3); */
+}
+
+.team-page-header .back-link {
+    display: inline-block;
+    /* Per centrarlo con text-align sull'header */
+    margin-top: 15px;
+    /* Spazio tra il banner e il link */
+    /* Mantieni gli altri stili di .back-link se sono appropriati */
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 1.2em;
+    /* Puoi aggiungere uno sfondo se vuoi che risalti di più */
+    /* background-color: rgba(0,0,0,0.3); */
+    /* padding: 8px 15px; */
+    /* border-radius: 5px; */
 }
 
 header h1 .mobile-br {
@@ -34,6 +77,16 @@ header h1 .mobile-br {
     header h1 .mobile-br {
         display: inline;
         /* Mostra il <br> solo su mobile */
+    }
+
+    .team-banner-image {
+        max-height: 250px;
+        /* Riduci l'altezza massima del banner su mobile */
+    }
+
+    .team-page-header .back-link {
+        font-size: 1em;
+        /* Riduci un po' il link su mobile */
     }
 
     /* Per evitare che "2015-2016" vada a capo ulteriormente, anche se non dovrebbe essere necessario */
