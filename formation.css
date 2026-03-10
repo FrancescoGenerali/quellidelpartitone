@@ -391,6 +391,55 @@ header h1 .mobile-br {
     left: 65%;
 }
 
+/* MODULO 3-4-3 */
+.module-3-4-3 .gk {
+    left: 50%;
+}
+
+.module-3-4-3 .def-l {
+    left: 20%;
+}
+
+.module-3-4-3 .def-c {
+    left: 50%;
+}
+
+.module-3-4-3 .def-r {
+    left: 80%;
+}
+
+.module-3-4-3 .mid-l {
+    left: 15%;
+}
+
+.module-3-4-3 .mid-lc {
+    left: 35%;
+}
+
+.module-3-4-3 .mid-rc {
+    left: 65%;
+}
+
+.module-3-4-3 .mid-r {
+    left: 85%;
+}
+
+/* Attacco a tridente: una prima punta e due arretrati */
+.module-3-4-3 .fwd-c {
+    left: 50%;
+    top: 12%; /* Prima punta più avanzata */
+}
+
+.module-3-4-3 .fwd-l {
+    left: 30%;
+    top: 25%; /* Esterno sx arretrato */
+}
+
+.module-3-4-3 .fwd-r {
+    left: 70%;
+    top: 25%; /* Esterno dx arretrato */
+}
+
 /* MODULO 4-3-3 */
 .module-4-3-3 .gk {
     left: 50%;
