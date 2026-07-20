@@ -140,6 +140,10 @@
         <div class="shelf-container">
             <div class="shelf">
                 <div class="top-row">
+                    <div class="trophy-item">
+                        <div class="year">WORLD CUP 2026</div>
+                        <img src="images/Coccarda_World.png" alt="Coccarda" data-modal-image="images/Mondiale2026.jpg">
+                    </div>
                 </div>
                 <div class="bottom-row">
                     <div class="trophy-item">
@@ -361,6 +365,67 @@
         });
     </script>
 
+    <style>
+        /* Interazione riservata alla coccarda del Mondiale 2026. */
+        .trophy-item:has(> img[data-modal-image="images/Mondiale2026.jpg"]) {
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        .trophy-item:has(> img[data-modal-image="images/Mondiale2026.jpg"]):hover {
+            background: rgba(218, 165, 32, 0.38);
+            transform: translateY(-3px);
+        }
+
+        .trophy-item > img[data-modal-image="images/Mondiale2026.jpg"] {
+            transition: transform 0.25s ease;
+        }
+
+        .trophy-item:hover > img[data-modal-image="images/Mondiale2026.jpg"] {
+            transform: scale(1.08);
+        }
+
+        #world-cup-image-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+        }
+
+        #world-cup-image-modal.is-open { display: flex; }
+        #world-cup-image-modal img {
+            max-width: min(92vw, 1200px);
+            max-height: 88vh;
+            object-fit: contain;
+            cursor: default;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var coccarda = document.querySelector('.trophy-item > img[data-modal-image="images/Mondiale2026.jpg"]');
+            if (!coccarda) return;
+
+            var modal = document.createElement('div');
+            modal.id = 'world-cup-image-modal';
+            modal.setAttribute('role', 'dialog');
+            modal.setAttribute('aria-modal', 'true');
+            modal.innerHTML = '<img src="images/Mondiale2026.jpg" alt="World Cup 2026">';
+            document.body.appendChild(modal);
+
+            coccarda.addEventListener('click', function () { modal.classList.add('is-open'); });
+            modal.addEventListener('click', function () { modal.classList.remove('is-open'); });
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') modal.classList.remove('is-open');
+            });
+        });
+    </script>
 </body>
 
 </html>
