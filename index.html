@@ -369,21 +369,17 @@
         /* Interazione riservata alla coccarda del Mondiale 2026. */
         .trophy-item:has(> img[alt="Coccarda"][data-modal-image]) {
             cursor: pointer;
-            border-radius: 10px;
-            transition: background 0.25s ease, transform 0.25s ease;
-        }
-
-        .trophy-item:has(> img[alt="Coccarda"][data-modal-image]):hover {
-            background: rgba(218, 165, 32, 0.38);
-            transform: translateY(-3px);
         }
 
         .trophy-item > img[alt="Coccarda"][data-modal-image] {
+            cursor: pointer;
+            border-radius: 8px;
             transition: transform 0.25s ease;
         }
 
         .trophy-item:hover > img[alt="Coccarda"][data-modal-image] {
             transform: scale(1.08);
+            background: rgba(218, 165, 32, 0.38);
         }
 
         #world-cup-image-modal {
