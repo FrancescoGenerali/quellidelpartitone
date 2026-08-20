@@ -38,6 +38,11 @@ header h1 {
     background-color: #8c6a4f;
 }
 
+.bottom-navigation {
+    text-align: center;
+    margin: 10px 0 30px;
+}
+
 /* Contenitore principale del contenuto */
 main {
     padding: 20px;
