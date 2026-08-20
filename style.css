@@ -303,7 +303,7 @@ body {
 }
 
 /* Stile per i link di navigazione a fondo pagina */
-#recordLink {
+.footer-page-link {
     color: #f1f1f1;
     /* Colore bianco per distinguerlo dalla Bacheca Classica */
     font-size: 1.8em;
@@ -315,7 +315,7 @@ body {
     transition: border-color 0.3s ease-in-out;
 }
 
-#recordLink:hover {
+.footer-page-link:hover {
     border-bottom-color: #f1f1f1;
     /* Sottolineatura bianca al passaggio del mouse */
 }
