@@ -174,6 +174,7 @@
                             <li>Porta inviolata: +1</li>
                             <li>Rigore sbagliato: -2</li>
                             <li>Gol subito: -1</li>
+                            <li>Giocatore fuori ruolo: -1</li>
                             <li>Espulsione: -1</li>
                             <li>Ammonizione: -0.5</li>
                         </ul>
@@ -252,14 +253,22 @@
                 <div class="rule-item">
                     <h3>Sostituzioni</h3>
                     <p>
-                    TODO
+                    -C'è un limite di 5 sostituzioni per squadra.<br>
+                    -Riserve d'ufficio tipo "UNICA":<br>
+                    Se non c'è nessun giocatore in panchina a voto che può entrare, si attiva una riserva d'ufficio: 3 per i portieri, 4 per i giocatori di movimento. 
+                    Questa viene conteggiata nel limite delle 5 sostituzioni.<br>
+                    -Ordine di sostituzioni dipo "MASTER":<br>
+                    L'ordine dei giocatori in panchina è la priorità d'entrata, anche cambiando modulo.
+                    In assenza di soluzioni "pulite" possibili, entra un giocatore fuori ruolo prendendo un malus.
                     </p>
                 </div>
 
                 <div class="rule-item">
                     <h3>Switch</h3>
                     <p>
-                    TODO
+                    Tipo "PLUS"<br>
+                    Si può selezionare un giocatore schierato titolare e qualora non dovesse partire dal primo minuto, verrà sostituito da un altro calciatore selezionato.<br>
+                    Si può effettuare lo switch anche con un giocatore di un diverso ruolo, a patto che esista un modulo che lo permetta.
                     </p>
                 </div>
             </section>
@@ -268,27 +277,85 @@
                 <h2>Campionato</h2>
 
                 <div class="rule-item">
-                    <h3>Cosa succede in caso di parità al termine del campionato?</h3>
-                    <p>TODO</p>
+                    <h3>Criterio di ordinamento in classifica</h3>
+                    <p>
+                        <ul>
+                            <li>Punti</li>
+                            <li>Gol fatti</li>
+                            <li>Differenza reti</li>
+                            <li>Classifica avulsa</li>
+                        </ul>
+                    </p>
                 </div>
 
                 <div class="rule-item">
-                    <h3>Cosa succede in caso di partite rinviate?</h3>
-                    <p>TODO</p>
+                    <h3>Cos'è la classifica avulsa?</h3>
+                    <p>
+                        In caso di parità di punti, gol fatti e differenza reti tra due squadre, si guarda il risultato degli scontri diretti tra le due squadre.<br> 
+                        Se anche qui c'è parità, si guarda la differenza reti negli scontri diretti.<br>
+                        Se anche qui c'è parità, si guarda il numero di gol fatti negli scontri diretti.
+                    </p>
                 </div>
+
+                <div class="rule-item">
+                    <h3>Cosa succede se oltre metà delle partite vengono rinviate?</h3>
+                    <p>
+                        Se oltre la metà delle partite vengono rinviate, oltre tre giornate calcistiche successive, la giornata viene annullata.<br>
+                        ESE: 6 partite su 10 della 3^ giornata vengono rinviate oltre la 6^ giornata calcistica, la 3^ giornata viene annullata.<br>
+                        Nel caso raro dove oltre metà partite è rinviato oltre la fine del campionato, la giornata viene annullata.<br>
+                    </p>
+                </div>
+
+                <div class="rule-item">
+                    <h3>Cosa succede in caso di rinvio pre-stabilito?</h3>
+                    <p>
+                        Se il rinvio di una partita è pre-stabilito, oltre le tre giornate calcistiche successive (od oltre la fine del campionato), i giocatori di movimento schierati comunque prendono 5.5, ed il portiere 4.<br>
+                        Entro le tre giornate calcistiche successive, si aspetta l'esito.
+                    </p>
+                </div>
+
+                <div class="rule-item">
+                    <h3>Cosa succede in caso di rinvio non pre-stabilito?</h3>
+                    <p>
+                        Se il rinvio di una partita non era pre-stabilito, e viene successivamente stabilito oltre le tre giornate calcistiche successive (od oltre la fine del campionato), i giocatori schierati prendono 6.<br>
+                        Entro le tre giornate calcistiche successive, si aspetta l'esito.
+                    </p>
+                </div>
+
             </section>
 
             <section class="rule-section">
                 <h2>Coppa</h2>
 
                 <div class="rule-item">
-                    <h3>Come funziona il calendario</h3>
-                    <p>TODO</p>
+                    <h3>Come funziona il calendario?</h3>
+                    <p>
+                        Fase a gironi: due gironi da 3 squadre, andata e ritorno.<br>
+                        Semifinali: andata/ritono tra la prima e la seconda di ogni girone.<br>
+                        Finale: andata/ritono.
+                    </p>
                 </div>
 
                 <div class="rule-item">
-                    <h3>Come si formano i gironi</h3>
-                    <p>TODO</p>
+                    <h3>Criterio ordinamento classifica fase a gironi</h3>
+                    <p>
+                        Lo stesso del campionato.
+                    </p>
+                </div>
+
+                <div class="rule-item">
+                    <h3>Come vengono formati i gironi?</h3>
+                    <p>
+                        Girone A: 1^, 3^, 5^, 7^ del campionato.<br>
+                        Girone B: 2^, 4^, 6^, 8^ del campionato.<br>
+                    </p>
+                </div>
+
+                <div class="rule-item">
+                    <h3>Parite rinviate</h3>
+                    <p>
+                        Stesse regole del campionato, ma al posto di considerare "le tre giornate calcistiche successive", si considerano "le fasi" (gironi, semifinali, finale).<br>
+                    </p>
                 </div>
 
             </section>
